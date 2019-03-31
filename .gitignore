@@ -1,0 +1,4 @@
+build/
+dist/
+minipush.egg-info/
+.getiattributes/
