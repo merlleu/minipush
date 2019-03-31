@@ -4,7 +4,7 @@ Copyright (c) 2019 Rémi LANGDORPH
 Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
-__version__="0.0.5"
+__version__="0.0.5b"
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
 Copyright (c) 2019 Rémi LANGDORPH - mrerl@warlegend.net
@@ -77,9 +77,9 @@ class Minipush:
             "origins": o,
             "templates": templates_list
         }
+    def reset(self):
+        edit_templates(self.config["destination"]["folder"], self.config["destination"]["exts"], {"js": {}, "css": {}})
     def __str__(self):
         return f"<Minipush  config: {self.config}>"
     def __repr__(self):
         return f"<Minipush  config: {self.config}>"
-    def reset(self):
-        edit_templates(self.config["destination"]["folder"], self.config["destination"]["exts"], {"js": {}, "css": {}})

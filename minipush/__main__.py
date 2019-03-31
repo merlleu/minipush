@@ -4,40 +4,40 @@ Copyright (c) 2019 Rémi LANGDORPH
 Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
-__version__="0.0.5"
+__version__="0.0.5b"
 __doc__="""
-    minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
-    (c)2019 Rémi LANGDORPH - mrerl@warlegend.net
+minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
+(c)2019 Rémi LANGDORPH - mrerl@warlegend.net
 
-    This script supports the followings filetypes: css, js
-    Config: You have to create a file named 'config.json', if possible in the script folder.
-    {
-        "origin": {"folders":["css/", "js/core/", "js/plugins/", "js/"]},
-        "destination": {"folder": "../templates/", "exts": ["htm", "html"], "type": "embed", "basefolderlink": "/static/"},
-        "anchors": {"js": {"start": "<!--AutomatedJSExport-Start-->",
-                    "end": "<!--AutomatedJSExport-End-->"},
-                    "css": {"start": "<!--AutomatedCSSExport-Start-->",
-                            "end": "<!--AutomatedCSSExport-End-->"},
-                    "conf": {"start": "<!--AutomatedExport-Start->",
-                            "end": "<-AutomatedExport-End-->"}
-                    },
-        "format":{"embed":{"js": "<!--{filename}--><script>{content}</script>",
-                           "css": "<!--{filename}--><style>{content}</style>"},
-                  "link":{"js": "<script src='{path}'/>",
-                          "css": "<link href='{path}' rel='stylesheet'/>"}
+This script supports the followings filetypes: css, js
+Config: You have to create a file named 'config.json', if possible in the script folder.
+{
+    "origin": {"folders":["css/", "js/core/", "js/plugins/", "js/"]},
+    "destination": {"folder": "../templates/", "exts": ["htm", "html"], "type": "embed", "basefolderlink": "/static/"},
+    "anchors": {"js": {"start": "<!--AutomatedJSExport-Start-->",
+                "end": "<!--AutomatedJSExport-End-->"},
+                "css": {"start": "<!--AutomatedCSSExport-Start-->",
+                        "end": "<!--AutomatedCSSExport-End-->"},
+                "conf": {"start": "<!--AutomatedExport-Start->",
+                        "end": "<-AutomatedExport-End-->"}
                 },
-        "cache": {"folder": "../static/",
-                  "enabled": true}
-    }
+    "format":{"embed":{"js": "<!--{filename}--><script>{content}</script>",
+                       "css": "<!--{filename}--><style>{content}</style>"},
+              "link":{"js": "<script src='{path}'/>",
+                      "css": "<link href='{path}' rel='stylesheet'/>"}
+            },
+    "cache": {"folder": "../static/",
+              "enabled": true}
+}
 
-    Arguments:
-    command      argument         description
-    -c --config  {configfile}     set the config file to load
-    -j --json    '{configjson}'   set the config from json
-    -r --reset                    remove all the scripts from the templates
-    -h --help                     show help
-    -v --version                  show version
-    """
+Arguments:
+command      argument         description
+-c --config  {configfile}     set the config file to load
+-j --json    '{configjson}'   set the config from json
+-r --reset                    remove all the scripts from the templates
+-h --help                     show help
+-v --version                  show version
+"""
 from .push import *
 print_status=True
 def main():

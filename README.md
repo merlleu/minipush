@@ -1,5 +1,9 @@
-# minipush by Rémi "Mr e-RL" LANGDORPH
-## (c)2019 Rémi LANGDORPH - mrerl@warlegend.net
+# Minipush by Rémi "Mr e-RL" LANGDORPH
+## Copyright (c) 2019 Rémi LANGDORPH - mrerl@warlegend.net (under MIT license)
+
+## Links:
+#### [pypi project](https://pypi.org/project/minipush/)
+#### [github repo](https://github.com/merlleu/minipush)
 
 ### This package supports the followings filetypes: css, js
 
@@ -39,4 +43,5 @@ command      argument         description
 -j --json    '{configjson}'   set the config from json
 -r --reset                    remove all the scripts from the templates
 -h --help                     show help
+-v --version                  show version
 ```
