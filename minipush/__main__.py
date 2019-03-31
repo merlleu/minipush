@@ -4,7 +4,7 @@ Copyright (c) 2019 Rémi LANGDORPH
 Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
-__version__="0.0.3"
+__version__="0.0.5"
 __doc__="""
     minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
     (c)2019 Rémi LANGDORPH - mrerl@warlegend.net
@@ -36,6 +36,7 @@ __doc__="""
     -j --json    '{configjson}'   set the config from json
     -r --reset                    remove all the scripts from the templates
     -h --help                     show help
+    -v --version                  show version
     """
 from .push import *
 print_status=True
