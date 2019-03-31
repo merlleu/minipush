@@ -1,12 +1,11 @@
+##version#start##
+__version__='0.0.7'
+##version#end##
 try:
     from StringIO import StringIO # The pure-Python StringIO supports unicode.
 except ImportError:
     from io import StringIO
 import re
-
-
-__version__ = '0.2.0'
-
 
 def remove_comments(css):
     """Remove all CSS comment blocks."""

@@ -1,7 +1,6 @@
-__author__ = u"Andr\xe9 Malo"
-__docformat__ = "restructuredtext en"
-__license__ = "Apache License, Version 2.0"
-__version__ = '1.1.0'
+##version#start##
+__version__='0.0.7'
+##version#end##
 __all__ = ['jsmin']
 
 import functools as _ft

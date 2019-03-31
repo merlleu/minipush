@@ -5,7 +5,7 @@ Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
 ##version#start##
-__version__='0.0.6'
+__version__='0.0.7'
 ##version#end##
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
