@@ -2,10 +2,12 @@ import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
-
+##version#start##
+__version__='0.0.6'
+##version#end##
 setuptools.setup(
     name="minipush",
-    version="0.0.5b",
+    version=__version__,
     author="Rémi 'Mr e-RL'LANGDORPH",
     author_email="r.langdorph@gmail.com",
     description="A package to minimize your scripts and stylesheets",

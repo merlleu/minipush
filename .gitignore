@@ -1,3 +1,7 @@
 build/
 dist/
 minipush.egg-info/
+build.sh
+__pycache__/
+__target__/
+setversion.py

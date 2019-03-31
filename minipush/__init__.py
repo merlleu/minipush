@@ -4,7 +4,9 @@ Copyright (c) 2019 Rémi LANGDORPH
 Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
-__version__="0.0.5b"
+##version#start##
+__version__='0.0.6'
+##version#end##
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
 Copyright (c) 2019 Rémi LANGDORPH - mrerl@warlegend.net
