@@ -1,0 +1,34 @@
+{
+    "origin": {"folders":["../prestatic/css/",
+                          "../prestatic/js/core/",
+                          "../prestatic/js/plugins/",
+                          "../prestatic/js/"]},
+    "destination": {"folder": "../templates/",
+                    "exts": ["htm",
+                             "html"],
+                    "type": "embed",
+                    "basefolderlink": "/static/"},
+    "export": {"enabled": true,
+               "rules": [{"destination": "../static/min/package.js",
+                           "filters": ["**/*.js"]},
+                         {"destination": "../static/min/package_login.js",
+                          "filters": ["../prestatic/js/core/*.js",
+                                      "../prestatic/js/plugins/*.js"]},
+                         {"destination": "../static/min/style.css",
+                          "filters": ["**/*.css"]}
+    ]},
+    "anchors": {"js": {"start": "<!--MinipushJSExport-Start-->",
+                       "end": "<!--MinipushJSExport-End-->"},
+                "css": {"start": "<!--MinipushCSSExport-Start-->",
+                        "end": "<!--MinipushCSSExport-End-->"},
+                "conf": {"start": "<!--MinipushExport-Start->",
+                         "end": "<-MinipushExport-End-->"}
+                },
+    "format":{"embed":{"js": "<!--{filename}--><script>{content}</script>",
+                       "css": "<!--{filename}--><style>{content}</style>"},
+              "link":{"js": "<script src='{path}'/>",
+                      "css": "<link href='{path}' rel='stylesheet'/>"}
+            },
+    "cache": {"folder": "../static/",
+              "enabled": true}
+}

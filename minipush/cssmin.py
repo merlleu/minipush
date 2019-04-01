@@ -1,5 +1,5 @@
 ##version#start##
-__version__='0.0.7'
+__version__='0.0.11'
 ##version#end##
 try:
     from StringIO import StringIO # The pure-Python StringIO supports unicode.

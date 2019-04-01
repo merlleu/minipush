@@ -5,7 +5,7 @@ Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
 ##version#start##
-__version__='0.0.7'
+__version__='0.0.11'
 ##version#end##
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
@@ -36,7 +36,7 @@ Arguments:
 command      argument         description
 -c --config  {configfile}     set the config file to load
 -j --json    '{configjson}'   set the config from json
--r --reset                    remove all the scripts from the templates
+-C --clear                    remove all the scripts from the templates
 -h --help                     show help
 -v --version                  show version
 """
@@ -72,7 +72,7 @@ def main():
         except Exception as e:
             print(e)
             return
-    if "-r" in sys.argv or "--reset" in sys.argv:
+    if "-C" in sys.argv or "--clear" in sys.argv:
         print("removing scripts & styles in templates files")
         edit_templates(config["destination"]["folder"], config["destination"]["exts"], {"js": {}, "css": {}})
         return

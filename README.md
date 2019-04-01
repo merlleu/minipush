@@ -5,6 +5,11 @@
 #### [pypi project](https://pypi.org/project/minipush/)
 #### [github repo](https://github.com/merlleu/minipush)
 
+## Install with pypi:
+```
+pip install minipush
+```
+
 ### This package supports the followings filetypes: css, js
 
 # Sample config:
@@ -28,20 +33,21 @@
               "enabled": true}
 }
 ```
-# Example script:
+# Basic example script ([github](https://github.com/merlleu/minipush/blob/master/test/test_basic.py)):
 ```python
 from minipush import Minipush
 Minipush(file="config.json").run()
 ```
 
+
 # Command mode:
-## python -m minipush *arguments*
+``` python -m minipush [arguments] ```
 ```
 Arguments:
 command      argument         description
 -c --config  {configfile}     set the json config file to load
 -j --json    '{configjson}'   set the config from json
--r --reset                    remove all the scripts from the templates
+-C --clear                    remove all the scripts from the templates
 -h --help                     show help
 -v --version                  show version
 ```

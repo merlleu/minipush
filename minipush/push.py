@@ -4,11 +4,15 @@ Copyright (c) 2019 Rémi LANGDORPH
 Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
-
+print_status=True
 import os, json, time, sys, re, hashlib, binascii
 from .cssmin import cssmin
 from .jsmin import jsmin
-print_status=False
+
+def log(*args, **kwargs):
+    if print_status:
+        return print(*args, **kwargs)
+
 def min(file, cfiles, cpath, n):
     type=file.split(".")[::-1][0]
     data=open(file).read()
@@ -65,7 +69,7 @@ def gen_hash(file):
 def get_origins(folders, type):
     l=[]
     for folder in folders:
-        l+=[folder+_ for _ in os.listdir(folder) if _.split(".")[::-1][0] in type]
+        l+=[folder+_ for _ in os.listdir(folder) if (_.split(".")[::-1][0] in type and len(_.split("."))>1)]
     return l
 def get_cached_files(folder):
     try:
@@ -168,18 +172,6 @@ def lenext(l):
         d[ext]+=1
     d["total"]=len(l)
     return d
-def parse_config(file=None, dic=None):
-    if file!=None:
-        if isinstance(file, str):
-            return json.loads(open(file).read())
-        else:
-            return json.loads(file.read())
-    elif dic!=None:
-        if isinstance(dic, str):
-            return json.loads(dic)
-        elif isinstance(dic, dict):
-            return dic
-    return None
 def cache_status(config):
     if config.get("cache")!=None:
         if config["cache"]["enabled"]:
@@ -227,6 +219,3 @@ def parse_filepath(name):
     "folderlist": path,
     "folderlistr": path[::-1]
     }
-def log(*args, **kwargs):
-    if print_status:
-        return print(*args, **kwargs)
