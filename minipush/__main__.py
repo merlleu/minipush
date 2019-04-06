@@ -5,7 +5,7 @@ Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
 ##version#start##
-__version__='0.0.11'
+__version__='0.0.12'
 ##version#end##
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
@@ -99,7 +99,7 @@ def main():
                 if m["type"]=="css":
                     scripts["css"][_]=m["result"]
         edit_templates(config["destination"]["folder"], config["destination"]["exts"], scripts, config)
-        if export_status(config): export(scripts, config["export"]["rules"])
+        if export_status(config): export(scripts, config["export"]["rules"], config["format"]["export"])
         if cache_status(config): export_cache(l, config)
 if __name__=="__main__":
     main()

@@ -28,7 +28,7 @@ class Minipush:
                 if m["type"]=="css":
                     scripts["css"][_]=m["result"]
         templates_list=edit_templates(self.config["destination"]["folder"], self.config["destination"]["exts"], scripts, self.config)
-        if export_status(self.config): export(scripts, self.config["export"]["rules"])
+        if export_status(self.config): export(scripts, self.config["export"]["rules"], self.config["format"]["export"])
         if cache_status(self.config): export_cache(l, self.config)
         log(f"Minipush ended in {round(time.time()-t0, 3)}seconds.")
         return {

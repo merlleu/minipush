@@ -157,10 +157,10 @@ def export_cache(l, config):
         }
     _j=json.dumps(j)
     open(folder+"mincachedindex.json", "w").write(_j)
-def export(scripts, rules):
+def export(scripts, rules, format):
     log("Exporting files...")
     for _ in rules:
-        data=get_code_str(scripts[_["destination"].split(".")[::-1][0]], [parse_filepath(_) for _ in _["filters"]], "{content}\n")
+        data=get_code_str(scripts[_["destination"].split(".")[::-1][0]], [parse_filepath(__) for __ in _["filters"]], format["js"])
         save_file(_["destination"], data)
         log(f"Exported {_['destination']} ({round(len(data.encode('utf-8'))/1000, 3)} ko)")
 def lenext(l):
