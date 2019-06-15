@@ -41,7 +41,7 @@ class Minipush:
             "templates": templates_list
         }
     def clear(self):
-        edit_templates(self.config["destination"]["folder"], self.config["destination"]["exts"], {"js": {}, "css": {}})
+        edit_templates(self.config["destination"]["folder"], self.config["destination"]["exts"], {"js": {}, "css": {}}, self.config)
     def __str__(self):
         return f"<Minipush>"
     def __repr__(self):

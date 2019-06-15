@@ -5,7 +5,7 @@ Software under MIT license
 https://opensource.org/licenses/mit-license.php
 """
 ##version#start##
-__version__='0.0.12'
+__version__='0.0.13'
 ##version#end##
 __doc__="""
 minipush v"""+__version__+""" by Rémi "Mr e-RL" LANGDORPH
@@ -74,7 +74,7 @@ def main():
             return
     if "-C" in sys.argv or "--clear" in sys.argv:
         print("removing scripts & styles in templates files")
-        edit_templates(config["destination"]["folder"], config["destination"]["exts"], {"js": {}, "css": {}})
+        edit_templates(config["destination"]["folder"], config["destination"]["exts"], {"js": {}, "css": {}}, config)
         return
     else:
         print(f"""Cache: {'ON' if cache_status(config) else 'OFF'} \t   Origins: {' '.join(["'"+_+"'" for _ in config['origin']['folders']])} \t  Destination: {"'"+config['destination']['folder']+"'"} ({', '.join(["'*."+_+"'" for _ in config['destination']['exts']])})""")
