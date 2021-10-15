@@ -1,5 +1,4 @@
-# Minipush by Rémi "Mr e-RL" LANGDORPH
-## Copyright (c) 2019 Rémi LANGDORPH - mrerl@warlegend.net (under MIT license)
+# Minipush
 
 ## Links:
 #### [pypi project](https://pypi.org/project/minipush/)
@@ -51,3 +50,5 @@ command      argument         description
 -h --help                     show help
 -v --version                  show version
 ```
+
+### Copyright (c) 2019 Rémi "Mr e-RL"LANGDORPH - mrerl@warlegend.net (under MIT license)
