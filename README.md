@@ -1,4 +1,9 @@
+This repo is no longer maintained. You should use [WebPack](https://webpack.js.org/) instead.
+
 # Minipush
+
+Minipush is a tool to minimize css and js files and bundle them for an app. 
+
 
 ## Links:
 #### [pypi project](https://pypi.org/project/minipush/)
